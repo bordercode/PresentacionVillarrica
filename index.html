@@ -234,6 +234,45 @@
             background-color: rgba(0, 0, 0, 0.7);
         }
         
+        /* Image Grid Styles */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+            max-width: 90%;
+        }
+        
+        .grid-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .grid-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+        }
+        
+        /* QR Code Styles */
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .presentation-link {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #4cc9f0;
+        }
+        
         @media (max-width: 768px) {
             .slide-title {
                 font-size: 1.8rem;
@@ -260,6 +299,29 @@
                 top: 10px;
                 right: 15px;
                 font-size: 2rem;
+            }
+            
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .grid-image {
+                height: 150px;
+            }
+            
+            .qr-code {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .grid-image {
+                height: 180px;
             }
         }
     </style>
@@ -348,7 +410,7 @@
             <div class="slide-number">5</div>
         </div>
         
-        <!-- NEW SLIDE 6: Alternative Route with Embedded HTML (was slide 8) -->
+        <!-- Slide 6: Alternative Route with Embedded HTML -->
         <div class="slide" id="slide6">
             <h1 class="slide-title">México: una ruta alternativa factible</h1>
             <div class="slide-content">
@@ -379,7 +441,7 @@
             <div class="slide-number">7</div>
         </div>
         
-        <!-- NEW SLIDE 8: Environmental Impact (was slide 6) -->
+        <!-- Slide 8: Environmental Impact -->
         <div class="slide" id="slide8">
             <h1 class="slide-title">Impacto Ambiental del Gas Natural</h1>
             <div class="slide-content">
@@ -432,15 +494,49 @@
             <div class="slide-number">10</div>
         </div>
         
-        <!-- Slide 11: Closing -->
+        <!-- NEW SLIDE 11: Additional Images -->
         <div class="slide" id="slide11">
+            <h1 class="slide-title">Impactos y Consideraciones Adicionales</h1>
+            <div class="slide-content">
+                <p>Documentación visual complementaria sobre los proyectos de gas natural</p>
+                
+                <div class="image-grid">
+                    <img src="images/s14.jpg" alt="Imagen adicional 1" class="grid-image" data-caption="Documentación visual complementaria - Imagen 1">
+                    <img src="images/s15.jpg" alt="Imagen adicional 2" class="grid-image" data-caption="Documentación visual complementaria - Imagen 2">
+                    <img src="images/s16.jpg" alt="Imagen adicional 3" class="grid-image" data-caption="Documentación visual complementaria - Imagen 3">
+                    <img src="images/s17.jpg" alt="Imagen adicional 4" class="grid-image" data-caption="Documentación visual complementaria - Imagen 4">
+                    <img src="images/s18.jpg" alt="Imagen adicional 5" class="grid-image" data-caption="Documentación visual complementaria - Imagen 5">
+                </div>
+                
+                <p style="margin-top: 20px;">Haga clic en cualquier imagen para verla en pantalla completa</p>
+            </div>
+            <div class="slide-number">11</div>
+        </div>
+        
+        <!-- Slide 12: Closing (updated with QR code) -->
+        <div class="slide" id="slide12">
             <h1 class="slide-title">Gracias por su atención</h1>
             <div class="slide-content">
                 <p>XLV Congreso Nacional y XXX Internacional de Geografía</p>
                 <p>Villarrica, Región de La Araucanía</p>
                 <p>06 Noviembre 2025</p>
+                
+                <!-- QR Code -->
+                <div style="margin-top: 30px;">
+                    <p>Acceda a esta presentación en línea:</p>
+                    <!-- Note: You'll need to generate and add a QR code image -->
+                    <!-- For now, using a placeholder div that you can replace with an actual QR code image -->
+                    <div class="qr-code" style="background-color: #2a2a4a; display: flex; justify-content: center; align-items: center; color: #4cc9f0; font-weight: bold;">
+                        [QR Code Image]<br>https://sochogeo2025-villarrica.netlify.app/
+                    </div>
+                    <p class="presentation-link">
+                        <a href="https://sochogeo2025-villarrica.netlify.app/" target="_blank" style="color: #4cc9f0;">
+                            https://sochogeo2025-villarrica.netlify.app/
+                        </a>
+                    </p>
+                </div>
             </div>
-            <div class="slide-number">11</div>
+            <div class="slide-number">12</div>
         </div>
     </div>
     
@@ -466,8 +562,8 @@
                 currentSlide = index;
             }
             
-            // Full screen image functionality
-            document.querySelectorAll('.slide-image').forEach(img => {
+            // Full screen image functionality for both regular images and grid images
+            document.querySelectorAll('.slide-image, .grid-image').forEach(img => {
                 img.addEventListener('click', function() {
                     fullscreenImage.src = this.src;
                     imageCaption.textContent = this.getAttribute('data-caption');
@@ -545,8 +641,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
