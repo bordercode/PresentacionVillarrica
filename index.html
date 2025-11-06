@@ -30,13 +30,14 @@
             width: 100%;
             height: 100%;
             display: none;
-            padding: 40px;
+            padding: 30px; /* Reduced padding for more space */
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             transition: opacity 0.5s ease;
+            overflow-y: auto; /* Allow scrolling if needed */
         }
         
         .slide.active {
@@ -44,23 +45,29 @@
         }
         
         .slide-title {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            font-size: 2.2rem; /* Slightly smaller for better fit */
+            margin-bottom: 20px;
             color: #4cc9f0;
             text-shadow: 0 0 10px rgba(76, 201, 240, 0.5);
+            line-height: 1.2;
         }
         
         .slide-content {
-            max-width: 900px;
-            width: 90%;
-            font-size: 1.2rem;
-            line-height: 1.6;
+            max-width: 95%; /* Increased from 90% */
+            width: 95%;
+            font-size: 1.1rem; /* Slightly smaller base font */
+            line-height: 1.5;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
         .slide-image {
-            max-width: 80%;
-            max-height: 60vh;
-            margin: 20px 0;
+            max-width: 85%;
+            max-height: 50vh; /* Reduced to allow more text space */
+            margin: 15px 0;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             cursor: pointer;
@@ -73,8 +80,8 @@
         }
         
         .slide-iframe {
-            width: 90%;
-            height: 70vh;
+            width: 95%;
+            height: 65vh; /* Slightly reduced */
             border: none;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -82,32 +89,38 @@
         
         .slide-number {
             position: absolute;
-            bottom: 20px;
-            right: 30px;
-            font-size: 1rem;
+            bottom: 15px;
+            right: 20px;
+            font-size: 0.9rem;
             color: #4cc9f0;
         }
         
+        /* UPDATED: Side-positioned navigation buttons */
         .nav-buttons {
             position: fixed;
-            bottom: 20px;
+            top: 0;
+            bottom: 0;
             left: 0;
             right: 0;
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+            pointer-events: none; /* Allow clicks to pass through */
             z-index: 100;
         }
         
         .nav-button {
-            padding: 10px 20px;
-            background-color: #4cc9f0;
+            padding: 15px 20px;
+            background-color: rgba(76, 201, 240, 0.8);
             color: #16213e;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
             transition: all 0.3s ease;
+            pointer-events: auto; /* Re-enable clicks on buttons */
+            margin: 0 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
         
         .nav-button:hover {
@@ -115,9 +128,32 @@
             transform: translateY(-2px);
         }
         
+        /* Home button specific styles */
+        .home-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: rgba(76, 201, 240, 0.9);
+            color: #16213e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            z-index: 101;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .home-button:hover {
+            background-color: #3aa8d0;
+            transform: translateX(-50%) translateY(-2px);
+        }
+        
         .author-info {
-            margin-top: 20px;
-            font-size: 1rem;
+            margin-top: 15px;
+            font-size: 0.9rem;
             color: #a9a9a9;
         }
         
@@ -143,7 +179,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            gap: 30px;
+            gap: 20px; /* Reduced gap */
         }
         
         .column {
@@ -152,23 +188,25 @@
         
         .project-list {
             text-align: left;
-            margin: 20px auto;
+            margin: 15px auto;
             max-width: 600px;
+            font-size: 1rem; /* Ensure list items fit */
         }
         
         .project-list li {
-            margin-bottom: 15px;
+            margin-bottom: 10px; /* Reduced spacing */
         }
         
         .biodiversity-list {
             text-align: left;
-            margin: 20px auto;
+            margin: 15px auto;
             max-width: 800px;
             columns: 2;
+            font-size: 1rem; /* Ensure list items fit */
         }
         
         .biodiversity-list li {
-            margin-bottom: 10px;
+            margin-bottom: 8px; /* Reduced spacing */
         }
         
         .conservation-highlight {
@@ -238,14 +276,14 @@
         .image-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin: 20px 0;
-            max-width: 90%;
+            gap: 12px; /* Reduced gap */
+            margin: 15px 0;
+            max-width: 95%;
         }
         
         .grid-image {
             width: 100%;
-            height: 200px;
+            height: 180px; /* Slightly smaller */
             object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -260,30 +298,36 @@
         
         /* QR Code Styles */
         .qr-code {
-            width: 200px;
-            height: 200px;
-            margin: 20px auto;
+            width: 180px; /* Slightly smaller */
+            height: 180px;
+            margin: 15px auto;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
         
         .presentation-link {
-            margin-top: 15px;
-            font-size: 1rem;
+            margin-top: 10px;
+            font-size: 0.9rem;
             color: #4cc9f0;
         }
         
         @media (max-width: 768px) {
+            .slide {
+                padding: 20px;
+            }
+            
             .slide-title {
                 font-size: 1.8rem;
             }
             
             .slide-content {
                 font-size: 1rem;
+                max-width: 98%;
             }
             
             .two-column {
                 flex-direction: column;
+                gap: 15px;
             }
             
             .biodiversity-list {
@@ -303,25 +347,46 @@
             
             .image-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
             }
             
             .grid-image {
-                height: 150px;
+                height: 140px;
             }
             
             .qr-code {
                 width: 150px;
                 height: 150px;
             }
+            
+            .nav-button {
+                padding: 12px 15px;
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
         }
         
         @media (max-width: 480px) {
+            .slide-title {
+                font-size: 1.5rem;
+            }
+            
+            .slide-content {
+                font-size: 0.9rem;
+            }
+            
             .image-grid {
                 grid-template-columns: 1fr;
             }
             
             .grid-image {
-                height: 180px;
+                height: 160px;
+            }
+            
+            .nav-button {
+                padding: 10px 12px;
+                margin: 0 5px;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -496,16 +561,16 @@
         
         <!-- NEW SLIDE 11: Additional Images -->
         <div class="slide" id="slide11">
-            <h1 class="slide-title">Patrimonio Natural de la Humanidad</h1>
+            <h1 class="slide-title">Impactos y Consideraciones Adicionales</h1>
             <div class="slide-content">
                 <p>Documentación visual complementaria sobre los proyectos de gas natural</p>
                 
                 <div class="image-grid">
-                    <img src="images/s14.png" alt="Imagen adicional 1" class="grid-image" data-caption="Documentación visual complementaria - Imagen 1">
+                    <img src="images/s14.jpg" alt="Imagen adicional 1" class="grid-image" data-caption="Documentación visual complementaria - Imagen 1">
                     <img src="images/s15.jpg" alt="Imagen adicional 2" class="grid-image" data-caption="Documentación visual complementaria - Imagen 2">
                     <img src="images/s16.jpg" alt="Imagen adicional 3" class="grid-image" data-caption="Documentación visual complementaria - Imagen 3">
                     <img src="images/s17.jpg" alt="Imagen adicional 4" class="grid-image" data-caption="Documentación visual complementaria - Imagen 4">
-                    <img src="images/s18.png" alt="Imagen adicional 5" class="grid-image" data-caption="Documentación visual complementaria - Imagen 5">
+                    <img src="images/s18.jpg" alt="Imagen adicional 5" class="grid-image" data-caption="Documentación visual complementaria - Imagen 5">
                 </div>
                 
                 <p style="margin-top: 20px;">Haga clic en cualquier imagen para verla en pantalla completa</p>
@@ -522,29 +587,27 @@
                 <p>06 Noviembre 2025</p>
                 
                 <!-- QR Code -->
-<div style="margin-top: 30px;">
-    <p>Acceda a esta presentación en línea:</p>
-    <img src="images/sochogeo2025-villarrica-QR.png" alt="QR Code para la presentación" class="qr-code">
-    <p class="presentation-link">
-        <a href="https://sochogeo2025-villarrica.netlify.app/" target="_blank" style="color: #4cc9f0;">
-            https://sochogeo2025-villarrica.netlify.app/
-        </a>
-    </p>
-</div>
+                <div style="margin-top: 20px;">
+                    <p>Acceda a esta presentación en línea:</p>
+                    <img src="images/sochogeo2025-villarrica-QR.png" alt="QR Code para la presentación" class="qr-code">
                     <p class="presentation-link">
                         <a href="https://sochogeo2025-villarrica.netlify.app/" target="_blank" style="color: #4cc9f0;">
                             https://sochogeo2025-villarrica.netlify.app/
                         </a>
                     </p>
                 </div>
+                
+                <!-- Home Button - Only visible on last slide -->
+                <button class="home-button" id="homeButton">Volver al Inicio</button>
             </div>
             <div class="slide-number">12</div>
         </div>
     </div>
     
+    <!-- UPDATED: Side-positioned navigation buttons -->
     <div class="nav-buttons">
-        <button class="nav-button" id="prev-btn">Anterior</button>
-        <button class="nav-button" id="next-btn">Siguiente</button>
+        <button class="nav-button" id="prev-btn">‹ Anterior</button>
+        <button class="nav-button" id="next-btn">Siguiente ›</button>
     </div>
 
     <script>
@@ -552,6 +615,7 @@
             const slides = document.querySelectorAll('.slide');
             const prevBtn = document.getElementById('prev-btn');
             const nextBtn = document.getElementById('next-btn');
+            const homeButton = document.getElementById('homeButton');
             const fullscreenViewer = document.getElementById('fullscreenViewer');
             const fullscreenImage = document.getElementById('fullscreenImage');
             const imageCaption = document.getElementById('imageCaption');
@@ -562,6 +626,24 @@
                 slides.forEach(slide => slide.classList.remove('active'));
                 slides[index].classList.add('active');
                 currentSlide = index;
+                
+                // Show/hide home button based on current slide
+                if (homeButton) {
+                    if (currentSlide === slides.length - 1) {
+                        homeButton.style.display = 'block';
+                    } else {
+                        homeButton.style.display = 'none';
+                    }
+                }
+            }
+            
+            // Home button functionality
+            if (homeButton) {
+                homeButton.addEventListener('click', function() {
+                    showSlide(0);
+                });
+                // Initially hide the home button
+                homeButton.style.display = 'none';
             }
             
             // Full screen image functionality for both regular images and grid images
@@ -643,6 +725,3 @@
     </script>
 </body>
 </html>
-
-
-
