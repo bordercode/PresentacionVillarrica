@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_63b53c0be632815545c8e0d79a26ed51 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_63b53c0be632815545c8e0d79a26ed51" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_63b53c0be632815545c8e0d79a26ed51 = L.map(
+                "map_63b53c0be632815545c8e0d79a26ed51",
+                {
+                    center: [20.0, -150.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ef7d83b0cd46f256050690a44e2cbeac = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ef7d83b0cd46f256050690a44e2cbeac.addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            var circle_marker_cdf0768c75165dd483ff9dbf03ced4d7 = L.circleMarker(
+                [29.738, -93.87],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+        var popup_8b777bc0921c7a2c3bfdaeadff59736e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c0f7522bec78067b7398116eb089e53 = $(`<div id="html_3c0f7522bec78067b7398116eb089e53" style="width: 100.0%; height: 100.0%;">Sabine Pass LNG (USA)</div>`)[0];
+                popup_8b777bc0921c7a2c3bfdaeadff59736e.setContent(html_3c0f7522bec78067b7398116eb089e53);
+            
+        
+
+        circle_marker_cdf0768c75165dd483ff9dbf03ced4d7.bindPopup(popup_8b777bc0921c7a2c3bfdaeadff59736e)
+        ;
+
+        
+    
+    
+            circle_marker_cdf0768c75165dd483ff9dbf03ced4d7.bindTooltip(
+                `<div>
+                     Sabine Pass LNG (USA)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b3312d1d2769fe6ec7ed11aaed12af2 = L.circleMarker(
+                [27.824, -97.403],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+        var popup_12544767e60f8ea3e93f357653defe47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5481c7e3b0b2a2b6227e8c69132fe4d2 = $(`<div id="html_5481c7e3b0b2a2b6227e8c69132fe4d2" style="width: 100.0%; height: 100.0%;">Corpus Christi LNG (USA)</div>`)[0];
+                popup_12544767e60f8ea3e93f357653defe47.setContent(html_5481c7e3b0b2a2b6227e8c69132fe4d2);
+            
+        
+
+        circle_marker_8b3312d1d2769fe6ec7ed11aaed12af2.bindPopup(popup_12544767e60f8ea3e93f357653defe47)
+        ;
+
+        
+    
+    
+            circle_marker_8b3312d1d2769fe6ec7ed11aaed12af2.bindTooltip(
+                `<div>
+                     Corpus Christi LNG (USA)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e999a2ccb66939a34a4a6f25beb1e5a = L.circleMarker(
+                [28.95, -95.36],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+        var popup_5790ad7a4aa1aebcef40398b9f843368 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23c32f98d35d8fc2271923ff62bf194d = $(`<div id="html_23c32f98d35d8fc2271923ff62bf194d" style="width: 100.0%; height: 100.0%;">Freeport LNG (USA)</div>`)[0];
+                popup_5790ad7a4aa1aebcef40398b9f843368.setContent(html_23c32f98d35d8fc2271923ff62bf194d);
+            
+        
+
+        circle_marker_2e999a2ccb66939a34a4a6f25beb1e5a.bindPopup(popup_5790ad7a4aa1aebcef40398b9f843368)
+        ;
+
+        
+    
+    
+            circle_marker_2e999a2ccb66939a34a4a6f25beb1e5a.bindTooltip(
+                `<div>
+                     Freeport LNG (USA)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76312737020ae82ede34c4ce0604a974 = L.circleMarker(
+                [29.77, -93.36],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+        var popup_557bdc4f11d859be72f7bc9935a0f5b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd7dba4b5f456825440d6477d98ec322 = $(`<div id="html_fd7dba4b5f456825440d6477d98ec322" style="width: 100.0%; height: 100.0%;">Cameron LNG (USA)</div>`)[0];
+                popup_557bdc4f11d859be72f7bc9935a0f5b5.setContent(html_fd7dba4b5f456825440d6477d98ec322);
+            
+        
+
+        circle_marker_76312737020ae82ede34c4ce0604a974.bindPopup(popup_557bdc4f11d859be72f7bc9935a0f5b5)
+        ;
+
+        
+    
+    
+            circle_marker_76312737020ae82ede34c4ce0604a974.bindTooltip(
+                `<div>
+                     Cameron LNG (USA)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7d67c8802b053dc57135fe1d47d7c368 = L.circleMarker(
+                [29.9064941, -112.7110836],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+        var popup_a701313e1400429ffad75ef08770d076 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26ac800a78753134b4d99d5cfea679ff = $(`<div id="html_26ac800a78753134b4d99d5cfea679ff" style="width: 100.0%; height: 100.0%;">Puerto Libertad LNG (Mexico)</div>`)[0];
+                popup_a701313e1400429ffad75ef08770d076.setContent(html_26ac800a78753134b4d99d5cfea679ff);
+            
+        
+
+        circle_marker_7d67c8802b053dc57135fe1d47d7c368.bindPopup(popup_a701313e1400429ffad75ef08770d076)
+        ;
+
+        
+    
+    
+            circle_marker_7d67c8802b053dc57135fe1d47d7c368.bindTooltip(
+                `<div>
+                     Puerto Libertad LNG (Mexico)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df91711599072c52db458405941f6e85 = L.circleMarker(
+                [35.6, 140.0],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+        var popup_06b0ced29f57fa81701ef7415a27a8a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f6dfd2dd1d570f02b276f560dae97ad = $(`<div id="html_5f6dfd2dd1d570f02b276f560dae97ad" style="width: 100.0%; height: 100.0%;">Tokyo/Chiba (Japan)</div>`)[0];
+                popup_06b0ced29f57fa81701ef7415a27a8a2.setContent(html_5f6dfd2dd1d570f02b276f560dae97ad);
+            
+        
+
+        circle_marker_df91711599072c52db458405941f6e85.bindPopup(popup_06b0ced29f57fa81701ef7415a27a8a2)
+        ;
+
+        
+    
+    
+            circle_marker_df91711599072c52db458405941f6e85.bindTooltip(
+                `<div>
+                     Tokyo/Chiba (Japan)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9335dc622e4af2a8aa16ffc25425c5e2 = L.circleMarker(
+                [37.45, 126.7],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+        var popup_f6375f979886c1efbeea590b4a0c23c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27eb43c41d779f26ace144ac006b453d = $(`<div id="html_27eb43c41d779f26ace144ac006b453d" style="width: 100.0%; height: 100.0%;">Incheon (South Korea)</div>`)[0];
+                popup_f6375f979886c1efbeea590b4a0c23c6.setContent(html_27eb43c41d779f26ace144ac006b453d);
+            
+        
+
+        circle_marker_9335dc622e4af2a8aa16ffc25425c5e2.bindPopup(popup_f6375f979886c1efbeea590b4a0c23c6)
+        ;
+
+        
+    
+    
+            circle_marker_9335dc622e4af2a8aa16ffc25425c5e2.bindTooltip(
+                `<div>
+                     Incheon (South Korea)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7ee91ad15a69b1d6f8906db017e8e7b = L.circleMarker(
+                [31.2, 121.5],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+        var popup_be9f110c93b54f3c9ccd2f13cc484359 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9112974ebbeb9fbf01b4b774bf022131 = $(`<div id="html_9112974ebbeb9fbf01b4b774bf022131" style="width: 100.0%; height: 100.0%;">Shanghai (China)</div>`)[0];
+                popup_be9f110c93b54f3c9ccd2f13cc484359.setContent(html_9112974ebbeb9fbf01b4b774bf022131);
+            
+        
+
+        circle_marker_e7ee91ad15a69b1d6f8906db017e8e7b.bindPopup(popup_be9f110c93b54f3c9ccd2f13cc484359)
+        ;
+
+        
+    
+    
+            circle_marker_e7ee91ad15a69b1d6f8906db017e8e7b.bindTooltip(
+                `<div>
+                     Shanghai (China)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7333e63646b948bd24c78ca5141ae11e = L.circleMarker(
+                [39.0, 117.7],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+        var popup_356aa1727c441cba8c5784f65ea58e08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55a7a399a7a5a262bcf7f86075db8f80 = $(`<div id="html_55a7a399a7a5a262bcf7f86075db8f80" style="width: 100.0%; height: 100.0%;">Tianjin (China)</div>`)[0];
+                popup_356aa1727c441cba8c5784f65ea58e08.setContent(html_55a7a399a7a5a262bcf7f86075db8f80);
+            
+        
+
+        circle_marker_7333e63646b948bd24c78ca5141ae11e.bindPopup(popup_356aa1727c441cba8c5784f65ea58e08)
+        ;
+
+        
+    
+    
+            circle_marker_7333e63646b948bd24c78ca5141ae11e.bindTooltip(
+                `<div>
+                     Tianjin (China)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3c4232e75b333a3faf2dba5c103d1dc = L.circleMarker(
+                [19.0, 72.8],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+        var popup_e851041a609916116c77208fba10bea6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ac46a365768e1479d7aa9bc01020aab = $(`<div id="html_4ac46a365768e1479d7aa9bc01020aab" style="width: 100.0%; height: 100.0%;">Mumbai (India)</div>`)[0];
+                popup_e851041a609916116c77208fba10bea6.setContent(html_4ac46a365768e1479d7aa9bc01020aab);
+            
+        
+
+        circle_marker_a3c4232e75b333a3faf2dba5c103d1dc.bindPopup(popup_e851041a609916116c77208fba10bea6)
+        ;
+
+        
+    
+    
+            circle_marker_a3c4232e75b333a3faf2dba5c103d1dc.bindTooltip(
+                `<div>
+                     Mumbai (India)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1fa42198fc5a9c1aedce2d183093149c = L.marker(
+                [9.26, -79.92],
+                {
+}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            var icon_8efc844c420d3bf617434b6cb471fe6e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13696274b828b5b9ddf61ebe87819998 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa8215d83ef525250e9ebaadbfc2089e = $(`<div id="html_aa8215d83ef525250e9ebaadbfc2089e" style="width: 100.0%; height: 100.0%;">Panama Canal</div>`)[0];
+                popup_13696274b828b5b9ddf61ebe87819998.setContent(html_aa8215d83ef525250e9ebaadbfc2089e);
+            
+        
+
+        marker_1fa42198fc5a9c1aedce2d183093149c.bindPopup(popup_13696274b828b5b9ddf61ebe87819998)
+        ;
+
+        
+    
+    
+            marker_1fa42198fc5a9c1aedce2d183093149c.bindTooltip(
+                `<div>
+                     Panama Canal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1fa42198fc5a9c1aedce2d183093149c.setIcon(icon_8efc844c420d3bf617434b6cb471fe6e);
+            
+    
+            var poly_line_6549f90e34f7548e2dfa90140c0871d0 = L.polyline(
+                [[29.738, -93.87], [9.26, -79.92], [35.6, -220.0]],
+                {"bubblingMouseEvents": true, "color": "#440357", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#440357", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_6549f90e34f7548e2dfa90140c0871d0.bindTooltip(
+                `<div>
+                     <b>Sabine Pass LNG (USA) → Tokyo/Chiba (Japan)</b><br>Route: Panama Canal → Pacific<br>Distance: 16205 km<br>Voyage Time: 19.2 days<br>Cost: $102.09 M USD<br><b>Δ vs Puerto Libertad:</b> +42.29 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_c5a15181764b0c524b59309c13a7e5b4 = L.polyline(
+                [[29.738, -93.87], [9.26, -79.92], [37.45, -233.3]],
+                {"bubblingMouseEvents": true, "color": "#365b8c", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#365b8c", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_c5a15181764b0c524b59309c13a7e5b4.bindTooltip(
+                `<div>
+                     <b>Sabine Pass LNG (USA) → Incheon (South Korea)</b><br>Route: Panama Canal → Pacific<br>Distance: 16828 km<br>Voyage Time: 19.9 days<br>Cost: $106.02 M USD<br><b>Δ vs Puerto Libertad:</b> +41.08 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a4ecc3b86456b602af4b807042f64423 = L.polyline(
+                [[29.738, -93.87], [9.26, -79.92], [31.2, -238.5]],
+                {"bubblingMouseEvents": true, "color": "#33b679", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#33b679", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_a4ecc3b86456b602af4b807042f64423.bindTooltip(
+                `<div>
+                     <b>Sabine Pass LNG (USA) → Shanghai (China)</b><br>Route: Panama Canal → Pacific<br>Distance: 17670 km<br>Voyage Time: 20.9 days<br>Cost: $111.32 M USD<br><b>Δ vs Puerto Libertad:</b> +41.20 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_160e28d5b13ca9293cc718908a1be122 = L.polyline(
+                [[29.738, -93.87], [9.26, -79.92], [39.0, -242.3]],
+                {"bubblingMouseEvents": true, "color": "#2b748e", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2b748e", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_160e28d5b13ca9293cc718908a1be122.bindTooltip(
+                `<div>
+                     <b>Sabine Pass LNG (USA) → Tianjin (China)</b><br>Route: Panama Canal → Pacific<br>Distance: 17048 km<br>Voyage Time: 20.2 days<br>Cost: $107.40 M USD<br><b>Δ vs Puerto Libertad:</b> +39.71 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_dabb66e607e0deb0976b6fdd335ec42f = L.polyline(
+                [[29.738, -93.87], [9.26, -79.92], [19.0, -287.2]],
+                {"bubblingMouseEvents": true, "color": "#eee51b", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#eee51b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_dabb66e607e0deb0976b6fdd335ec42f.bindTooltip(
+                `<div>
+                     <b>Sabine Pass LNG (USA) → Mumbai (India)</b><br>Route: Panama Canal → Pacific<br>Distance: 18377 km<br>Voyage Time: 21.8 days<br>Cost: $115.78 M USD<br><b>Δ vs Puerto Libertad:</b> +24.14 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_05326966460221980155f58b47153452 = L.polyline(
+                [[27.824, -97.403], [9.26, -79.92], [35.6, -220.0]],
+                {"bubblingMouseEvents": true, "color": "#460e61", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#460e61", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_05326966460221980155f58b47153452.bindTooltip(
+                `<div>
+                     <b>Corpus Christi LNG (USA) → Tokyo/Chiba (Japan)</b><br>Route: Panama Canal → Pacific<br>Distance: 16265 km<br>Voyage Time: 19.3 days<br>Cost: $102.47 M USD<br><b>Δ vs Puerto Libertad:</b> +42.66 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_889d8150cac55f105b0223ab1a56d684 = L.polyline(
+                [[27.824, -97.403], [9.26, -79.92], [37.45, -233.3]],
+                {"bubblingMouseEvents": true, "color": "#32628d", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#32628d", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_889d8150cac55f105b0223ab1a56d684.bindTooltip(
+                `<div>
+                     <b>Corpus Christi LNG (USA) → Incheon (South Korea)</b><br>Route: Panama Canal → Pacific<br>Distance: 16888 km<br>Voyage Time: 20.0 days<br>Cost: $106.39 M USD<br><b>Δ vs Puerto Libertad:</b> +41.46 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_70432afc6e6d838c70834ff344c47a9f = L.polyline(
+                [[27.824, -97.403], [9.26, -79.92], [31.2, -238.5]],
+                {"bubblingMouseEvents": true, "color": "#3dbb74", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3dbb74", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_70432afc6e6d838c70834ff344c47a9f.bindTooltip(
+                `<div>
+                     <b>Corpus Christi LNG (USA) → Shanghai (China)</b><br>Route: Panama Canal → Pacific<br>Distance: 17730 km<br>Voyage Time: 21.0 days<br>Cost: $111.70 M USD<br><b>Δ vs Puerto Libertad:</b> +41.58 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_8cbdb14303998a0a2ff6a92393002da4 = L.polyline(
+                [[27.824, -97.403], [9.26, -79.92], [39.0, -242.3]],
+                {"bubblingMouseEvents": true, "color": "#287a8e", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#287a8e", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_8cbdb14303998a0a2ff6a92393002da4.bindTooltip(
+                `<div>
+                     <b>Corpus Christi LNG (USA) → Tianjin (China)</b><br>Route: Panama Canal → Pacific<br>Distance: 17107 km<br>Voyage Time: 20.3 days<br>Cost: $107.78 M USD<br><b>Δ vs Puerto Libertad:</b> +40.08 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_30cd056e3c1aa6e93e3e8e139db3d48e = L.polyline(
+                [[27.824, -97.403], [9.26, -79.92], [19.0, -287.2]],
+                {"bubblingMouseEvents": true, "color": "#fde724", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#fde724", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_30cd056e3c1aa6e93e3e8e139db3d48e.bindTooltip(
+                `<div>
+                     <b>Corpus Christi LNG (USA) → Mumbai (India)</b><br>Route: Panama Canal → Pacific<br>Distance: 18437 km<br>Voyage Time: 21.8 days<br>Cost: $116.15 M USD<br><b>Δ vs Puerto Libertad:</b> +24.52 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2c746915a852a10fdc3143933f081cd2 = L.polyline(
+                [[28.95, -95.36], [9.26, -79.92], [35.6, -220.0]],
+                {"bubblingMouseEvents": true, "color": "#45065a", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#45065a", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_2c746915a852a10fdc3143933f081cd2.bindTooltip(
+                `<div>
+                     <b>Freeport LNG (USA) → Tokyo/Chiba (Japan)</b><br>Route: Panama Canal → Pacific<br>Distance: 16223 km<br>Voyage Time: 19.2 days<br>Cost: $102.21 M USD<br><b>Δ vs Puerto Libertad:</b> +42.40 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_8fec39c9695316c3869f82eff3c865c5 = L.polyline(
+                [[28.95, -95.36], [9.26, -79.92], [37.45, -233.3]],
+                {"bubblingMouseEvents": true, "color": "#355d8c", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#355d8c", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_8fec39c9695316c3869f82eff3c865c5.bindTooltip(
+                `<div>
+                     <b>Freeport LNG (USA) → Incheon (South Korea)</b><br>Route: Panama Canal → Pacific<br>Distance: 16846 km<br>Voyage Time: 19.9 days<br>Cost: $106.13 M USD<br><b>Δ vs Puerto Libertad:</b> +41.20 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2bb1a7248c931026c8ba501e28d6d699 = L.polyline(
+                [[28.95, -95.36], [9.26, -79.92], [31.2, -238.5]],
+                {"bubblingMouseEvents": true, "color": "#36b877", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#36b877", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_2bb1a7248c931026c8ba501e28d6d699.bindTooltip(
+                `<div>
+                     <b>Freeport LNG (USA) → Shanghai (China)</b><br>Route: Panama Canal → Pacific<br>Distance: 17689 km<br>Voyage Time: 20.9 days<br>Cost: $111.44 M USD<br><b>Δ vs Puerto Libertad:</b> +41.32 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_977a3f218fa557ab6c9ca7bd0af3112a = L.polyline(
+                [[28.95, -95.36], [9.26, -79.92], [39.0, -242.3]],
+                {"bubblingMouseEvents": true, "color": "#2a768e", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2a768e", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_977a3f218fa557ab6c9ca7bd0af3112a.bindTooltip(
+                `<div>
+                     <b>Freeport LNG (USA) → Tianjin (China)</b><br>Route: Panama Canal → Pacific<br>Distance: 17066 km<br>Voyage Time: 20.2 days<br>Cost: $107.52 M USD<br><b>Δ vs Puerto Libertad:</b> +39.82 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b1e7a16c995fa3e7a46a45ef98d9acc0 = L.polyline(
+                [[28.95, -95.36], [9.26, -79.92], [19.0, -287.2]],
+                {"bubblingMouseEvents": true, "color": "#f3e51e", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#f3e51e", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_b1e7a16c995fa3e7a46a45ef98d9acc0.bindTooltip(
+                `<div>
+                     <b>Freeport LNG (USA) → Mumbai (India)</b><br>Route: Panama Canal → Pacific<br>Distance: 18395 km<br>Voyage Time: 21.8 days<br>Cost: $115.89 M USD<br><b>Δ vs Puerto Libertad:</b> +24.26 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_826d4b78e5732f0257baa41b9377cb65 = L.polyline(
+                [[29.77, -93.36], [9.26, -79.92], [35.6, -220.0]],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#440154", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_826d4b78e5732f0257baa41b9377cb65.bindTooltip(
+                `<div>
+                     <b>Cameron LNG (USA) → Tokyo/Chiba (Japan)</b><br>Route: Panama Canal → Pacific<br>Distance: 16180 km<br>Voyage Time: 19.2 days<br>Cost: $101.93 M USD<br><b>Δ vs Puerto Libertad:</b> +42.13 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5cae30874d2d5d4fe2f6559e014a8a17 = L.polyline(
+                [[29.77, -93.36], [9.26, -79.92], [37.45, -233.3]],
+                {"bubblingMouseEvents": true, "color": "#37588c", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#37588c", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_5cae30874d2d5d4fe2f6559e014a8a17.bindTooltip(
+                `<div>
+                     <b>Cameron LNG (USA) → Incheon (South Korea)</b><br>Route: Panama Canal → Pacific<br>Distance: 16803 km<br>Voyage Time: 19.9 days<br>Cost: $105.86 M USD<br><b>Δ vs Puerto Libertad:</b> +40.92 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2651f98c87b1d9269eccd9a768fd1f85 = L.polyline(
+                [[29.77, -93.36], [9.26, -79.92], [31.2, -238.5]],
+                {"bubblingMouseEvents": true, "color": "#2fb37b", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2fb37b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_2651f98c87b1d9269eccd9a768fd1f85.bindTooltip(
+                `<div>
+                     <b>Cameron LNG (USA) → Shanghai (China)</b><br>Route: Panama Canal → Pacific<br>Distance: 17645 km<br>Voyage Time: 20.9 days<br>Cost: $111.17 M USD<br><b>Δ vs Puerto Libertad:</b> +41.04 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_8b875eeb6f72ae805b07496f34c22a2c = L.polyline(
+                [[29.77, -93.36], [9.26, -79.92], [39.0, -242.3]],
+                {"bubblingMouseEvents": true, "color": "#2c718e", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2c718e", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_8b875eeb6f72ae805b07496f34c22a2c.bindTooltip(
+                `<div>
+                     <b>Cameron LNG (USA) → Tianjin (China)</b><br>Route: Panama Canal → Pacific<br>Distance: 17023 km<br>Voyage Time: 20.2 days<br>Cost: $107.24 M USD<br><b>Δ vs Puerto Libertad:</b> +39.55 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f3bb580b8c9db0071afba1a2234b84b5 = L.polyline(
+                [[29.77, -93.36], [9.26, -79.92], [19.0, -287.2]],
+                {"bubblingMouseEvents": true, "color": "#e7e419", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e7e419", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_f3bb580b8c9db0071afba1a2234b84b5.bindTooltip(
+                `<div>
+                     <b>Cameron LNG (USA) → Mumbai (India)</b><br>Route: Panama Canal → Pacific<br>Distance: 18352 km<br>Voyage Time: 21.7 days<br>Cost: $115.62 M USD<br><b>Δ vs Puerto Libertad:</b> +23.98 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4a183ba167cec7e9935929d035eee0a1 = L.polyline(
+                [[29.9064941, -112.7110836], [35.6, -220.0]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 3.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_4a183ba167cec7e9935929d035eee0a1.bindTooltip(
+                `<div>
+                     <b>Puerto Libertad LNG (Mexico) → Tokyo/Chiba (Japan)</b><br>Route: Pacific direct<br>Distance: 9492 km<br>Voyage Time: 11.2 days<br>Cost (Puerto Libertad): $59.80 M USD<br><b>Δ vs Avg US Gulf:</b> -42.37 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_8402ba4cb74e64c97e33791c39bdaa3d = L.polyline(
+                [[29.9064941, -112.7110836], [37.45, -233.3]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 3.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_8402ba4cb74e64c97e33791c39bdaa3d.bindTooltip(
+                `<div>
+                     <b>Puerto Libertad LNG (Mexico) → Incheon (South Korea)</b><br>Route: Pacific direct<br>Distance: 10307 km<br>Voyage Time: 12.2 days<br>Cost (Puerto Libertad): $64.94 M USD<br><b>Δ vs Avg US Gulf:</b> -41.17 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_67a4685532ab6b912ece635974888a43 = L.polyline(
+                [[29.9064941, -112.7110836], [31.2, -238.5]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 3.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_67a4685532ab6b912ece635974888a43.bindTooltip(
+                `<div>
+                     <b>Puerto Libertad LNG (Mexico) → Shanghai (China)</b><br>Route: Pacific direct<br>Distance: 11130 km<br>Voyage Time: 13.2 days<br>Cost (Puerto Libertad): $70.12 M USD<br><b>Δ vs Avg US Gulf:</b> -41.29 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_3ba77c1f15923ff4d6d0e1d73341f01e = L.polyline(
+                [[29.9064941, -112.7110836], [39.0, -242.3]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 3.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_3ba77c1f15923ff4d6d0e1d73341f01e.bindTooltip(
+                `<div>
+                     <b>Puerto Libertad LNG (Mexico) → Tianjin (China)</b><br>Route: Pacific direct<br>Distance: 10745 km<br>Voyage Time: 12.7 days<br>Cost (Puerto Libertad): $67.70 M USD<br><b>Δ vs Avg US Gulf:</b> -39.79 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_95f5643dd724969444afeb4586d88ead = L.polyline(
+                [[29.9064941, -112.7110836], [19.0, -287.2]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 3.5}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            poly_line_95f5643dd724969444afeb4586d88ead.bindTooltip(
+                `<div>
+                     <b>Puerto Libertad LNG (Mexico) → Mumbai (India)</b><br>Route: Pacific direct<br>Distance: 14545 km<br>Voyage Time: 17.2 days<br>Cost (Puerto Libertad): $91.63 M USD<br><b>Δ vs Avg US Gulf:</b> -24.23 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be870f9a587a456b60643606bc7cf4be = L.circleMarker(
+                [29.738, -93.87],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.86201258673274, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            circle_marker_be870f9a587a456b60643606bc7cf4be.bindTooltip(
+                `<div>
+                     Sabine Pass LNG (USA)<br>Avg Cost: $108.52 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c84f2dcac216a5a9794ceb80c7f9f367 = L.circleMarker(
+                [27.824, -97.403],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.0, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            circle_marker_c84f2dcac216a5a9794ceb80c7f9f367.bindTooltip(
+                `<div>
+                     Corpus Christi LNG (USA)<br>Avg Cost: $108.90 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76297ba175c94cc9764c133c074ac5b5 = L.circleMarker(
+                [28.95, -95.36],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.90390719633453, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            circle_marker_76297ba175c94cc9764c133c074ac5b5.bindTooltip(
+                `<div>
+                     Freeport LNG (USA)<br>Avg Cost: $108.64 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c33137a3475d1b85109c384a39b2bcf1 = L.circleMarker(
+                [29.77, -93.36],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.803669071578316, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            circle_marker_c33137a3475d1b85109c384a39b2bcf1.bindTooltip(
+                `<div>
+                     Cameron LNG (USA)<br>Avg Cost: $108.36 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf8fe32c8e75d14b45c2be31330d2fd2 = L.circleMarker(
+                [29.9064941, -112.7110836],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 3}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+    
+            circle_marker_bf8fe32c8e75d14b45c2be31330d2fd2.bindTooltip(
+                `<div>
+                     Puerto Libertad LNG (Mexico)<br>Avg Cost: $70.84 M USD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+    var color_map_b42004584ddc6ef5f4ae5c09185a041d = {};
+
+    
+    color_map_b42004584ddc6ef5f4ae5c09185a041d.color = d3.scale.threshold()
+              .domain([16179.882577759952, 16184.405442527872, 16188.928307295791, 16193.451172063713, 16197.974036831632, 16202.496901599552, 16207.019766367472, 16211.542631135393, 16216.065495903313, 16220.588360671232, 16225.111225439152, 16229.634090207073, 16234.156954974993, 16238.679819742913, 16243.202684510832, 16247.725549278754, 16252.248414046673, 16256.771278814593, 16261.294143582512, 16265.817008350432, 16270.339873118353, 16274.862737886273, 16279.385602654193, 16283.908467422112, 16288.431332190034, 16292.954196957953, 16297.477061725873, 16301.999926493792, 16306.522791261714, 16311.045656029633, 16315.568520797553, 16320.091385565473, 16324.614250333394, 16329.137115101314, 16333.659979869233, 16338.182844637153, 16342.705709405072, 16347.228574172994, 16351.751438940913, 16356.274303708833, 16360.797168476753, 16365.320033244674, 16369.842898012594, 16374.365762780513, 16378.888627548433, 16383.411492316354, 16387.934357084272, 16392.457221852193, 16396.980086620115, 16401.502951388033, 16406.025816155954, 16410.548680923872, 16415.071545691793, 16419.594410459715, 16424.117275227632, 16428.640139995554, 16433.163004763475, 16437.685869531393, 16442.208734299315, 16446.731599067232, 16451.254463835154, 16455.777328603075, 16460.300193370993, 16464.823058138914, 16469.345922906832, 16473.868787674754, 16478.391652442675, 16482.914517210593, 16487.437381978514, 16491.960246746436, 16496.483111514353, 16501.005976282275, 16505.528841050193, 16510.051705818114, 16514.574570586035, 16519.097435353953, 16523.620300121875, 16528.143164889796, 16532.666029657714, 16537.188894425635, 16541.711759193553, 16546.234623961474, 16550.757488729396, 16555.280353497314, 16559.803218265235, 16564.326083033153, 16568.848947801074, 16573.371812568996, 16577.894677336913, 16582.417542104835, 16586.940406872756, 16591.463271640674, 16595.986136408595, 16600.509001176513, 16605.031865944435, 16609.554730712356, 16614.077595480274, 16618.600460248195, 16623.123325016113, 16627.646189784035, 16632.169054551956, 16636.691919319874, 16641.214784087795, 16645.737648855717, 16650.260513623634, 16654.783378391556, 16659.306243159474, 16663.829107927395, 16668.351972695316, 16672.874837463234, 16677.397702231156, 16681.920566999077, 16686.443431766995, 16690.966296534916, 16695.489161302834, 16700.012026070755, 16704.534890838677, 16709.057755606595, 16713.580620374516, 16718.103485142434, 16722.626349910355, 16727.149214678277, 16731.672079446194, 16736.194944214116, 16740.717808982037, 16745.240673749955, 16749.763538517876, 16754.286403285794, 16758.809268053716, 16763.332132821637, 16767.854997589555, 16772.377862357476, 16776.900727125394, 16781.423591893315, 16785.946456661237, 16790.469321429155, 16794.992186197076, 16799.515050964997, 16804.037915732915, 16808.560780500837, 16813.083645268754, 16817.606510036676, 16822.129374804597, 16826.652239572515, 16831.175104340437, 16835.697969108354, 16840.220833876276, 16844.743698644197, 16849.266563412115, 16853.789428180036, 16858.312292947958, 16862.835157715876, 16867.358022483797, 16871.880887251715, 16876.403752019636, 16880.926616787558, 16885.449481555475, 16889.972346323397, 16894.49521109132, 16899.018075859236, 16903.540940627157, 16908.063805395075, 16912.586670162997, 16917.109534930918, 16921.632399698836, 16926.155264466757, 16930.678129234675, 16935.200994002596, 16939.723858770518, 16944.246723538436, 16948.769588306357, 16953.29245307428, 16957.815317842196, 16962.338182610118, 16966.861047378035, 16971.383912145957, 16975.90677691388, 16980.429641681796, 16984.952506449717, 16989.47537121764, 16993.998235985557, 16998.521100753478, 17003.043965521396, 17007.566830289317, 17012.08969505724, 17016.612559825156, 17021.135424593078, 17025.658289360996, 17030.181154128917, 17034.70401889684, 17039.226883664756, 17043.749748432678, 17048.2726132006, 17052.795477968517, 17057.31834273644, 17061.841207504356, 17066.364072272278, 17070.8869370402, 17075.409801808117, 17079.932666576038, 17084.455531343956, 17088.978396111877, 17093.5012608798, 17098.024125647717, 17102.546990415638, 17107.06985518356, 17111.592719951477, 17116.1155847194, 17120.638449487316, 17125.161314255238, 17129.68417902316, 17134.207043791077, 17138.729908559, 17143.252773326916, 17147.775638094838, 17152.29850286276, 17156.821367630677, 17161.3442323986, 17165.86709716652, 17170.389961934437, 17174.91282670236, 17179.435691470277, 17183.958556238198, 17188.48142100612, 17193.004285774037, 17197.52715054196, 17202.050015309876, 17206.572880077798, 17211.09574484572, 17215.618609613637, 17220.14147438156, 17224.66433914948, 17229.187203917398, 17233.71006868532, 17238.232933453237, 17242.75579822116, 17247.27866298908, 17251.801527756998, 17256.32439252492, 17260.84725729284, 17265.370122060758, 17269.89298682868, 17274.415851596597, 17278.93871636452, 17283.46158113244, 17287.984445900358, 17292.50731066828, 17297.0301754362, 17301.55304020412, 17306.07590497204, 17310.598769739958, 17315.12163450788, 17319.6444992758, 17324.16736404372, 17328.69022881164, 17333.213093579558, 17337.73595834748, 17342.2588231154, 17346.78168788332, 17351.30455265124, 17355.82741741916, 17360.35028218708, 17364.873146955, 17369.396011722918, 17373.91887649084, 17378.44174125876, 17382.96460602668, 17387.4874707946, 17392.010335562518, 17396.53320033044, 17401.05606509836, 17405.57892986628, 17410.1017946342, 17414.62465940212, 17419.14752417004, 17423.67038893796, 17428.19325370588, 17432.7161184738, 17437.23898324172, 17441.76184800964, 17446.28471277756, 17450.807577545478, 17455.3304423134, 17459.85330708132, 17464.37617184924, 17468.89903661716, 17473.42190138508, 17477.944766153, 17482.46763092092, 17486.99049568884, 17491.51336045676, 17496.03622522468, 17500.5590899926, 17505.08195476052, 17509.60481952844, 17514.12768429636, 17518.65054906428, 17523.1734138322, 17527.69627860012, 17532.219143368042, 17536.74200813596, 17541.26487290388, 17545.7877376718, 17550.31060243972, 17554.83346720764, 17559.35633197556, 17563.87919674348, 17568.4020615114, 17572.92492627932, 17577.44779104724, 17581.97065581516, 17586.49352058308, 17591.016385351002, 17595.53925011892, 17600.06211488684, 17604.58497965476, 17609.10784442268, 17613.630709190602, 17618.15357395852, 17622.67643872644, 17627.19930349436, 17631.72216826228, 17636.2450330302, 17640.76789779812, 17645.29076256604, 17649.813627333962, 17654.33649210188, 17658.8593568698, 17663.38222163772, 17667.90508640564, 17672.427951173562, 17676.95081594148, 17681.4736807094, 17685.99654547732, 17690.51941024524, 17695.042275013162, 17699.56513978108, 17704.088004549, 17708.610869316923, 17713.13373408484, 17717.65659885276, 17722.17946362068, 17726.7023283886, 17731.225193156522, 17735.74805792444, 17740.27092269236, 17744.79378746028, 17749.3166522282, 17753.839516996122, 17758.36238176404, 17762.88524653196, 17767.408111299883, 17771.9309760678, 17776.453840835722, 17780.976705603643, 17785.49957037156, 17790.022435139483, 17794.5452999074, 17799.068164675322, 17803.591029443243, 17808.11389421116, 17812.636758979083, 17817.159623747, 17821.68248851492, 17826.205353282843, 17830.72821805076, 17835.251082818682, 17839.773947586604, 17844.29681235452, 17848.819677122443, 17853.34254189036, 17857.865406658282, 17862.388271426204, 17866.91113619412, 17871.434000962043, 17875.95686572996, 17880.479730497882, 17885.002595265803, 17889.52546003372, 17894.048324801643, 17898.571189569564, 17903.09405433748, 17907.616919105403, 17912.13978387332, 17916.662648641242, 17921.185513409164, 17925.70837817708, 17930.231242945003, 17934.75410771292, 17939.276972480842, 17943.799837248764, 17948.32270201668, 17952.845566784603, 17957.368431552524, 17961.891296320442, 17966.414161088363, 17970.93702585628, 17975.459890624203, 17979.982755392124, 17984.505620160042, 17989.028484927963, 17993.55134969588, 17998.074214463802, 18002.597079231724, 18007.11994399964, 18011.642808767563, 18016.165673535485, 18020.688538303402, 18025.211403071324, 18029.73426783924, 18034.257132607163, 18038.779997375084, 18043.302862143002, 18047.825726910924, 18052.348591678845, 18056.871456446763, 18061.394321214684, 18065.917185982602, 18070.440050750523, 18074.962915518445, 18079.485780286363, 18084.008645054284, 18088.531509822205, 18093.054374590123, 18097.577239358045, 18102.100104125962, 18106.622968893884, 18111.145833661805, 18115.668698429723, 18120.191563197644, 18124.714427965562, 18129.237292733484, 18133.760157501405, 18138.283022269323, 18142.805887037244, 18147.328751805166, 18151.851616573083, 18156.374481341005, 18160.897346108923, 18165.420210876844, 18169.943075644765, 18174.465940412683, 18178.988805180605, 18183.511669948522, 18188.034534716444, 18192.557399484365, 18197.080264252283, 18201.603129020205, 18206.125993788126, 18210.648858556044, 18215.171723323965, 18219.694588091883, 18224.217452859804, 18228.740317627726, 18233.263182395644, 18237.786047163565, 18242.308911931483, 18246.831776699404, 18251.354641467326, 18255.877506235243, 18260.400371003165, 18264.923235771086, 18269.446100539004, 18273.968965306925, 18278.491830074843, 18283.014694842765, 18287.537559610686, 18292.060424378604, 18296.583289146525, 18301.106153914443, 18305.629018682364, 18310.151883450286, 18314.674748218204, 18319.197612986125, 18323.720477754046, 18328.243342521964, 18332.766207289886, 18337.289072057807, 18341.811936825725, 18346.334801593646, 18350.857666361564, 18355.380531129485, 18359.903395897403, 18364.426260665325, 18368.949125433246, 18373.471990201164, 18377.994854969085, 18382.517719737007, 18387.040584504924, 18391.563449272846, 18396.086314040764, 18400.609178808685, 18405.132043576607, 18409.654908344524, 18414.177773112446, 18418.700637880364, 18423.223502648285, 18427.746367416206, 18432.269232184124, 18436.792096952046])
+              .range(['#ffffe0ff', '#feffdfff', '#fcfedeff', '#fbfddcff', '#f9fcdbff', '#f8fcdaff', '#f6fbd8ff', '#f5fad7ff', '#f3f9d6ff', '#f2f9d4ff', '#f0f8d3ff', '#eff7d2ff', '#edf6d0ff', '#ebf6cfff', '#eaf5cdff', '#e8f4ccff', '#e7f3cbff', '#e5f2c9ff', '#e4f2c8ff', '#e2f1c7ff', '#e1f0c5ff', '#dfefc4ff', '#deefc3ff', '#dceec1ff', '#dbedc0ff', '#d9ecbfff', '#d7ecbdff', '#d6ebbcff', '#d4eabbff', '#d3e9b9ff', '#d1e9b8ff', '#d0e8b6ff', '#cee7b5ff', '#cde6b4ff', '#cbe5b2ff', '#cae5b1ff', '#c8e4b0ff', '#c7e3aeff', '#c5e2adff', '#c3e2acff', '#c2e1aaff', '#c0e0a9ff', '#bfdfa8ff', '#bddfa6ff', '#bcdea5ff', '#badda4ff', '#b9dca2ff', '#b7dba1ff', '#b6db9fff', '#b4da9eff', '#b3d99dff', '#b1d89bff', '#afd89aff', '#aed799ff', '#acd697ff', '#abd596ff', '#a9d595ff', '#a8d493ff', '#a6d392ff', '#a5d291ff', '#a3d28fff', '#a2d18eff', '#a0d08dff', '#9fcf8bff', '#9dce8aff', '#9bce89ff', '#9acd87ff', '#98cc86ff', '#97cb84ff', '#95cb83ff', '#94ca82ff', '#92c980ff', '#91c87fff', '#8fc87eff', '#8ec77cff', '#8cc67bff', '#8bc57aff', '#89c478ff', '#87c477ff', '#86c376ff', '#84c274ff', '#83c173ff', '#81c172ff', '#80c070ff', '#7ebf6fff', '#7dbe6dff', '#7bbe6cff', '#7abd6bff', '#78bc69ff', '#77bb68ff', '#75bb67ff', '#73ba65ff', '#72b964ff', '#70b863ff', '#6fb761ff', '#6db760ff', '#6cb65fff', '#6ab55dff', '#69b45cff', '#67b45bff', '#66b359ff', '#64b258ff', '#63b156ff', '#61b155ff', '#5fb054ff', '#5eaf52ff', '#5cae51ff', '#5bad50ff', '#59ad4eff', '#58ac4dff', '#56ab4cff', '#55aa4aff', '#53aa49ff', '#52a948ff', '#50a846ff', '#4fa745ff', '#4da744ff', '#4ba642ff', '#4aa541ff', '#48a43fff', '#47a43eff', '#45a33dff', '#44a23bff', '#42a13aff', '#41a039ff', '#3fa037ff', '#3e9f36ff', '#3c9e35ff', '#3a9d33ff', '#399d32ff', '#379c31ff', '#369b2fff', '#349a2eff', '#339a2dff', '#31992bff', '#30982aff', '#2e9729ff', '#2d9627ff', '#2b9626ff', '#2a9524ff', '#289423ff', '#269322ff', '#259320ff', '#23921fff', '#22911eff', '#20901cff', '#1f901bff', '#1d8f1aff', '#1c8e18ff', '#1a8d17ff', '#198d16ff', '#178c14ff', '#168b13ff', '#148a12ff', '#128910ff', '#11890fff', '#0f880dff', '#0e870cff', '#0c860bff', '#0b8609ff', '#098508ff', '#088407ff', '#068305ff', '#058304ff', '#038203ff', '#028101ff', '#008000ff', '#007f01ff', '#007f02ff', '#007e04ff', '#007d05ff', '#007c07ff', '#007c08ff', '#007b0aff', '#007a0bff', '#00790dff', '#00790eff', '#007810ff', '#007711ff', '#007613ff', '#007515ff', '#007516ff', '#007418ff', '#007319ff', '#00721bff', '#00721cff', '#00711eff', '#00701fff', '#006f21ff', '#006e22ff', '#006e24ff', '#006d25ff', '#006c27ff', '#006b29ff', '#006b2aff', '#006a2cff', '#00692dff', '#00682fff', '#006830ff', '#006732ff', '#006633ff', '#006535ff', '#006436ff', '#006438ff', '#006339ff', '#00623bff', '#00613dff', '#00613eff', '#006040ff', '#005f41ff', '#005e43ff', '#005d44ff', '#005d46ff', '#005c47ff', '#005b49ff', '#005a4aff', '#005a4cff', '#00594dff', '#00584fff', '#005751ff', '#005752ff', '#005654ff', '#005555ff', '#005457ff', '#005358ff', '#00535aff', '#00525bff', '#00515dff', '#00505eff', '#005060ff', '#004f61ff', '#004e63ff', '#004d65ff', '#004c66ff', '#004c68ff', '#004b69ff', '#004a6bff', '#00496cff', '#00496eff', '#00486fff', '#004771ff', '#004672ff', '#004674ff', '#004575ff', '#004477ff', '#004379ff', '#00427aff', '#00427cff', '#00417dff', '#00407fff', '#003f80ff', '#003f82ff', '#003e83ff', '#003d85ff', '#003c86ff', '#003c88ff', '#003b8aff', '#003a8bff', '#00398dff', '#00388eff', '#003890ff', '#003791ff', '#003693ff', '#003594ff', '#003596ff', '#003497ff', '#003399ff', '#00329aff', '#00319cff', '#00319eff', '#00309fff', '#002fa1ff', '#002ea2ff', '#002ea4ff', '#002da5ff', '#002ca7ff', '#002ba8ff', '#002baaff', '#002aabff', '#0029adff', '#0028aeff', '#0027b0ff', '#0027b2ff', '#0026b3ff', '#0025b5ff', '#0024b6ff', '#0024b8ff', '#0023b9ff', '#0022bbff', '#0021bcff', '#0020beff', '#0020bfff', '#001fc1ff', '#001ec2ff', '#001dc4ff', '#001dc6ff', '#001cc7ff', '#001bc9ff', '#001acaff', '#001accff', '#0019cdff', '#0018cfff', '#0017d0ff', '#0016d2ff', '#0016d3ff', '#0015d5ff', '#0014d6ff', '#0013d8ff', '#0013daff', '#0012dbff', '#0011ddff', '#0010deff', '#000fe0ff', '#000fe1ff', '#000ee3ff', '#000de4ff', '#000ce6ff', '#000ce7ff', '#000be9ff', '#000aeaff', '#0009ecff', '#0009eeff', '#0008efff', '#0007f1ff', '#0006f2ff', '#0005f4ff', '#0005f5ff', '#0004f7ff', '#0003f8ff', '#0002faff', '#0002fbff', '#0001fdff', '#0000feff', '#0000ffff', '#0100feff', '#0100feff', '#0200fdff', '#0300fcff', '#0400fbff', '#0400fbff', '#0500faff', '#0600f9ff', '#0700f8ff', '#0700f8ff', '#0800f7ff', '#0900f6ff', '#0a00f5ff', '#0b00f5ff', '#0b00f4ff', '#0c00f3ff', '#0d00f2ff', '#0e00f1ff', '#0e00f1ff', '#0f00f0ff', '#1000efff', '#1100eeff', '#1200eeff', '#1200edff', '#1300ecff', '#1400ebff', '#1500ebff', '#1500eaff', '#1600e9ff', '#1700e8ff', '#1800e7ff', '#1800e7ff', '#1900e6ff', '#1a00e5ff', '#1b00e4ff', '#1c00e4ff', '#1c00e3ff', '#1d00e2ff', '#1e00e1ff', '#1f00e1ff', '#1f00e0ff', '#2000dfff', '#2100deff', '#2200deff', '#2300ddff', '#2300dcff', '#2400dbff', '#2500daff', '#2600daff', '#2600d9ff', '#2700d8ff', '#2800d7ff', '#2900d7ff', '#2900d6ff', '#2a00d5ff', '#2b00d4ff', '#2c00d4ff', '#2d00d3ff', '#2d00d2ff', '#2e00d1ff', '#2f00d0ff', '#3000d0ff', '#3000cfff', '#3100ceff', '#3200cdff', '#3300cdff', '#3400ccff', '#3400cbff', '#3500caff', '#3600caff', '#3700c9ff', '#3700c8ff', '#3800c7ff', '#3900c7ff', '#3a00c6ff', '#3a00c5ff', '#3b00c4ff', '#3c00c3ff', '#3d00c3ff', '#3e00c2ff', '#3e00c1ff', '#3f00c0ff', '#4000c0ff', '#4100bfff', '#4100beff', '#4200bdff', '#4300bdff', '#4400bcff', '#4500bbff', '#4500baff', '#4600b9ff', '#4700b9ff', '#4800b8ff', '#4800b7ff', '#4900b6ff', '#4a00b6ff', '#4b00b5ff', '#4b00b4ff', '#4c00b3ff', '#4d00b3ff', '#4e00b2ff', '#4f00b1ff', '#4f00b0ff', '#5000b0ff', '#5100afff', '#5200aeff', '#5200adff', '#5300acff', '#5400acff', '#5500abff', '#5600aaff', '#5600a9ff', '#5700a9ff', '#5800a8ff', '#5900a7ff', '#5900a6ff', '#5a00a6ff', '#5b00a5ff', '#5c00a4ff', '#5c00a3ff', '#5d00a2ff', '#5e00a2ff', '#5f00a1ff', '#6000a0ff', '#60009fff', '#61009fff', '#62009eff', '#63009dff', '#63009cff', '#64009cff', '#65009bff', '#66009aff', '#670099ff', '#670099ff', '#680098ff', '#690097ff', '#6a0096ff', '#6a0095ff', '#6b0095ff', '#6c0094ff', '#6d0093ff', '#6d0092ff', '#6e0092ff', '#6f0091ff', '#700090ff', '#71008fff', '#71008fff', '#72008eff', '#73008dff', '#74008cff', '#74008bff', '#75008bff', '#76008aff', '#770089ff', '#780088ff', '#780088ff', '#790087ff', '#7a0086ff', '#7b0085ff', '#7b0085ff', '#7c0084ff', '#7d0083ff', '#7e0082ff', '#7e0082ff', '#7f0081ff', '#800080ff']);
+    
+
+    color_map_b42004584ddc6ef5f4ae5c09185a041d.x = d3.scale.linear()
+              .domain([16179.882577759952, 18436.792096952046])
+              .range([0, 450 - 50]);
+
+    color_map_b42004584ddc6ef5f4ae5c09185a041d.legend = L.control({position: 'topright'});
+    color_map_b42004584ddc6ef5f4ae5c09185a041d.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_b42004584ddc6ef5f4ae5c09185a041d.legend.addTo(map_63b53c0be632815545c8e0d79a26ed51);
+
+    color_map_b42004584ddc6ef5f4ae5c09185a041d.xAxis = d3.svg.axis()
+        .scale(color_map_b42004584ddc6ef5f4ae5c09185a041d.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([16179.882577759952, 16932.185750823985, 17684.488923888013, 18436.792096952046]);
+
+    color_map_b42004584ddc6ef5f4ae5c09185a041d.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_b42004584ddc6ef5f4ae5c09185a041d.g = color_map_b42004584ddc6ef5f4ae5c09185a041d.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_b42004584ddc6ef5f4ae5c09185a041d.g.selectAll("rect")
+        .data(color_map_b42004584ddc6ef5f4ae5c09185a041d.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_b42004584ddc6ef5f4ae5c09185a041d.x(color_map_b42004584ddc6ef5f4ae5c09185a041d.color.domain()[i - 1]) : color_map_b42004584ddc6ef5f4ae5c09185a041d.x.range()[0],
+            x1: i < color_map_b42004584ddc6ef5f4ae5c09185a041d.color.domain().length ? color_map_b42004584ddc6ef5f4ae5c09185a041d.x(color_map_b42004584ddc6ef5f4ae5c09185a041d.color.domain()[i]) : color_map_b42004584ddc6ef5f4ae5c09185a041d.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_b42004584ddc6ef5f4ae5c09185a041d.g.call(color_map_b42004584ddc6ef5f4ae5c09185a041d.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Route Distance (km)");
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_63b53c0be632815545c8e0d79a26ed51);
+        
+</script>
+</html>
