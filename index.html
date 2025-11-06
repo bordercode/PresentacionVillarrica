@@ -63,6 +63,13 @@
             margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .slide-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
         }
         
         .slide-iframe {
@@ -169,6 +176,64 @@
             font-weight: bold;
         }
         
+        /* Full Screen Image Viewer */
+        .fullscreen-viewer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .fullscreen-viewer.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .fullscreen-image {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(76, 201, 240, 0.3);
+        }
+        
+        .close-fullscreen {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: color 0.3s ease;
+        }
+        
+        .close-fullscreen:hover {
+            color: #4cc9f0;
+        }
+        
+        .image-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
         @media (max-width: 768px) {
             .slide-title {
                 font-size: 1.8rem;
@@ -185,10 +250,28 @@
             .biodiversity-list {
                 columns: 1;
             }
+            
+            .fullscreen-image {
+                max-width: 98%;
+                max-height: 98%;
+            }
+            
+            .close-fullscreen {
+                top: 10px;
+                right: 15px;
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Full Screen Image Viewer -->
+    <div class="fullscreen-viewer" id="fullscreenViewer">
+        <button class="close-fullscreen" id="closeFullscreen">&times;</button>
+        <img class="fullscreen-image" id="fullscreenImage" src="" alt="Full screen image">
+        <div class="image-caption" id="imageCaption"></div>
+    </div>
+    
     <div class="slides-container">
         <!-- Slide 1: Title -->
         <div class="slide active" id="slide1">
@@ -215,7 +298,7 @@
                 <p>Desregulación • Fracturación Hidráulica</p>
                 <p>George W. Bush (Rep.) and Dick Cheney Ex. CEO Halliburton</p>
                 <p><strong>Figura 1.</strong> Gas natural en Estados Unidos. Balance entre producción, consumo interno y exportaciones 1950-2023</p>
-                <img src="images/s2.jpg" alt="Figura 1 - Gas natural en Estados Unidos" class="slide-image">
+                <img src="images/s2.jpg" alt="Figura 1 - Gas natural en Estados Unidos" class="slide-image" data-caption="Figura 1: Gas natural en Estados Unidos. Balance entre producción, consumo interno y exportaciones 1950-2023">
             </div>
             <div class="slide-number">2</div>
         </div>
@@ -227,11 +310,11 @@
                 <div class="two-column">
                     <div class="column">
                         <p><strong>Figura 2.</strong> Producción gas natural. Principales países 1980-2024</p>
-                        <img src="images/s4.jpg" alt="Figura 2 - Producción gas natural por países" class="slide-image">
+                        <img src="images/s4.jpg" alt="Figura 2 - Producción gas natural por países" class="slide-image" data-caption="Figura 2: Producción gas natural. Principales países 1980-2024">
                     </div>
                     <div class="column">
                         <!-- GIF for slide 3 -->
-                        <img src="images/s3.gif" alt="Animation" class="slide-image">
+                        <img src="images/s3.gif" alt="Animation" class="slide-image" data-caption="Animación: Producción de gas natural">
                     </div>
                 </div>
             </div>
@@ -245,7 +328,7 @@
                 <p>Hoy principal productor mundial de Gas Natural</p>
                 <p>Transición Energética</p>
                 <p><strong>Mapa 1:</strong> Cuenca Pérmica (Permian Basin)</p>
-                <img src="images/s5.jpg" alt="Mapa 1 - Cuenca Pérmica" class="slide-image">
+                <img src="images/s5.jpg" alt="Mapa 1 - Cuenca Pérmica" class="slide-image" data-caption="Mapa 1: Cuenca Pérmica (Permian Basin)">
                 <p class="author-info">Fuente: Elaboración propia con datos de Esri, U.S. Federal Datasets, Sempra, México Pacific, INEGI, LNG Alliance</p>
             </div>
             <div class="slide-number">4</div>
@@ -257,7 +340,7 @@
             <div class="slide-content">
                 <p>Demanda mundial se incrementa. Especialmente en Asia.</p>
                 <p><strong>Mapa 2:</strong> Tráfico de Buques Costa Este 2024</p>
-                <img src="images/s6.jpg" alt="Mapa 2 - Tráfico de Buques" class="slide-image">
+                <img src="images/s6.jpg" alt="Mapa 2 - Tráfico de Buques" class="slide-image" data-caption="Mapa 2: Tráfico de Buques Costa Este 2024">
                 <p>Congestión del Canal de Panamá</p>
                 <p>Rutas alternativas para el Pacífico</p>
                 <p class="author-info">Fuente: Elaboración propia con datos de US Marine Cadastre</p>
@@ -271,7 +354,7 @@
             <div class="slide-content">
                 <p>¿Es realmente un energético de menor impacto para el proceso de cambio climático/calentamiento global?</p>
                 <p><strong>Figura 3:</strong> Gas Natural en la generación de Eléctrica. Contraste emisiones vs. Carbón</p>
-                <img src="images/s8.jpg" alt="Figura 3 - Emisiones Gas Natural vs Carbón" class="slide-image">
+                <img src="images/s8.jpg" alt="Figura 3 - Emisiones Gas Natural vs Carbón" class="slide-image" data-caption="Figura 3: Gas Natural en la generación de Eléctrica. Contraste emisiones vs. Carbón">
             </div>
             <div class="slide-number">6</div>
         </div>
@@ -289,7 +372,7 @@
                     <li>Gasoducto Sonora (834.3 km)</li>
                 </ul>
                 <p><strong>Mapa 4:</strong> Gasoductos y plantas de licuefacción</p>
-                <img src="images/s10.jpg" alt="Mapa 4 - Gasoductos y plantas de licuefacción" class="slide-image">
+                <img src="images/s10.jpg" alt="Mapa 4 - Gasoductos y plantas de licuefacción" class="slide-image" data-caption="Mapa 4: Gasoductos y plantas de licuefacción">
                 <p class="author-info">Fuente: Elaboración propia con datos de Esri, U.S. Federal Datasets, Sempra, México Pacific, INEGI, LNG Alliance</p>
             </div>
             <div class="slide-number">7</div>
@@ -312,7 +395,7 @@
             <h1 class="slide-title">Consideraciones Ecológicas</h1>
             <div class="slide-content">
                 <p><strong>Mapa 5:</strong> Terminal de licuefacción Puerto Libertad, Sonora</p>
-                <img src="images/s11.jpg" alt="Mapa 5 - Puerto Libertad" class="slide-image">
+                <img src="images/s11.jpg" alt="Mapa 5 - Puerto Libertad" class="slide-image" data-caption="Mapa 5: Terminal de licuefacción Puerto Libertad, Sonora">
                 <p>Modelo de ordenamiento Ecológico Marino del Golfo de California</p>
                 <p>Ubicación: Limita con el litoral del estado Sonora que va de Cabo Tepoca al norte de Isla Tiburón</p>
                 <p>Superficie total: 3,704 km²</p>
@@ -371,6 +454,10 @@
             const slides = document.querySelectorAll('.slide');
             const prevBtn = document.getElementById('prev-btn');
             const nextBtn = document.getElementById('next-btn');
+            const fullscreenViewer = document.getElementById('fullscreenViewer');
+            const fullscreenImage = document.getElementById('fullscreenImage');
+            const imageCaption = document.getElementById('imageCaption');
+            const closeFullscreen = document.getElementById('closeFullscreen');
             let currentSlide = 0;
             
             function showSlide(index) {
@@ -378,6 +465,46 @@
                 slides[index].classList.add('active');
                 currentSlide = index;
             }
+            
+            // Full screen image functionality
+            document.querySelectorAll('.slide-image').forEach(img => {
+                img.addEventListener('click', function() {
+                    fullscreenImage.src = this.src;
+                    imageCaption.textContent = this.getAttribute('data-caption');
+                    fullscreenViewer.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            closeFullscreen.addEventListener('click', function() {
+                fullscreenViewer.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            fullscreenViewer.addEventListener('click', function(e) {
+                if (e.target === fullscreenViewer) {
+                    fullscreenViewer.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Keyboard navigation for slides and full screen viewer
+            document.addEventListener('keydown', (e) => {
+                // If full screen viewer is open, close it with Escape key
+                if (fullscreenViewer.classList.contains('active')) {
+                    if (e.key === 'Escape') {
+                        fullscreenViewer.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    }
+                } else {
+                    // Normal slide navigation
+                    if (e.key === 'ArrowLeft' && currentSlide > 0) {
+                        showSlide(currentSlide - 1);
+                    } else if (e.key === 'ArrowRight' && currentSlide < slides.length - 1) {
+                        showSlide(currentSlide + 1);
+                    }
+                }
+            });
             
             prevBtn.addEventListener('click', () => {
                 if (currentSlide > 0) {
@@ -387,15 +514,6 @@
             
             nextBtn.addEventListener('click', () => {
                 if (currentSlide < slides.length - 1) {
-                    showSlide(currentSlide + 1);
-                }
-            });
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft' && currentSlide > 0) {
-                    showSlide(currentSlide - 1);
-                } else if (e.key === 'ArrowRight' && currentSlide < slides.length - 1) {
                     showSlide(currentSlide + 1);
                 }
             });
